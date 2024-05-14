@@ -1,0 +1,11 @@
+services:
+  notebook_development:
+    image: try-gx-notebook
+    container_name: try-gx-notebook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+    volumes:
+      - ./notebook:/mnt
